@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="form-container">
+    <h2>Bienvenue !</h2>
+    <p>Votre inscription a bien été prise en compte.</p>
+    <h3>Téléchargez vos documents :</h3>
+    <ul>
+        <li><a href="{% static 'app/ANA.pdf' %}" download>Télécharger Document 1</a></li>
+        <li><a href="{% static 'app/GL.pdf' %}" download>Télécharger Document 2</a></li>
+        <!-- Ajoute d'autres liens ici -->
+    </ul>
+</div>
+{% endblock %}

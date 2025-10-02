@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div >
+<h2>Form</h2>
+<form method="post" action="" novalidate>
+    {% csrf_token %} <!--C’est un token de sécurité généré par Django.
+            Il protège ton formulaire contre les attaques de type CSRF-->
+    {{ form.as_p }} <!-- C’est la variable form envoyée par la vue (views.py). -->
+    <input type="submit" value="Envoyer">
+</form>
+</div>
+{% endblock %}
