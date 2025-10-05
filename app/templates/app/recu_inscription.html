@@ -1,0 +1,85 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<style>
+  /* ====== STYLE GÉNÉRAL ====== */
+  body {
+    font-family: DejaVu Sans, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container-pdf {
+    max-width: 700px;
+    background: #ffffff;
+    margin: 50px auto;
+    padding: 40px 50px;
+    border-radius: 10px;
+    border: 2px solid #1a73e8;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ====== TITRE ====== */
+  h1 {
+    text-align: center;
+    color: #1a73e8;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+
+  /* ====== PARAGRAPHES ====== */
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 8px 0;
+    margin: 0;
+  }
+
+  p strong {
+    display: inline-block;
+    width: 220px;
+    color: #000;
+  }
+
+  /* ====== LIGNES DE SÉPARATION ====== */
+  hr {
+    border: none;
+    border-top: 2px solid #1a73e8;
+    margin: 25px 0;
+  }
+
+  /* ====== PIED DE PAGE ====== */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 40px;
+  }
+
+  .footer span {
+    color: #1a73e8;
+  }
+</style>
+
+<div class="container-pdf">
+  <h1>Reçu d'inscription</h1>
+  <hr>
+
+  <p><strong>Nom :</strong> {{ user.name }}</p>
+  <p><strong>Prénoms :</strong> {{ user.prenoms }}</p>
+  <p><strong>Email :</strong> {{ user.email }}</p>
+  <p><strong>Niveau d'étude :</strong> {{ user.niveau_etude }}</p>
+  <p><strong>Établissement :</strong> {{ user.etablissement_origine }}</p>
+  <p><strong>Concours souhaité :</strong> {{ user.concours_souhaite }}</p>
+
+  <hr>
+  <div class="footer">
+    <p><strong>Plateforme d'inscription</strong> – Merci de votre confiance.</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,19 +1,107 @@
+/* Import de la police Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Style général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container du formulaire */
 .form-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* prend toute la hauteur de la fenêtre */
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
 }
-.form-container form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px; /* espace entre les champs */
-    width: 300px; /* largeur du formulaire, à ajuster si besoin */
+
+
+/* Titre */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
 }
-.form-container button {
+
+/* Champs du formulaire */
+form p {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+}
+
+/* Bouton submit */
+form input[type="submit"] {
+    width: 100%;
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background: #5753d6;
+    box-shadow: 0 8px 15px rgba(87, 83, 214, 0.3);
+}
+/* Styles pour l'impression PDF */
+@media print {
+    .form-container, .container-pdf {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+        border: none;
+        box-shadow: none;
+    }
+}
+.container-pdf{
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
 }

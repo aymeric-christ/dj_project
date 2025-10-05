@@ -24,5 +24,6 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.SignUp),
-    path('bienvenue/', views.bienvenue, name='bienvenue'),
+    path('bienvenue/<int:user_id>/', views.bienvenue, name='bienvenue'),
+    path('recu/<int:user_id>/', views.generer_pdf_recu, name='generer_pdf_recu'),
 ]
